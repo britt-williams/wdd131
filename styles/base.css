@@ -27,7 +27,7 @@
     color: var(--secondary-text);
     font-family: var(--heading-font);
     font-weight: 800;
-    font-size: xx-large;
+    font-size: 2rem;
 }
 
 nav {
@@ -68,7 +68,6 @@ main {
 h1 {
     grid-column: 1/-1;
     text-align: center;
-    align-items: center;
     margin: 30px auto 10px;
     padding: 15px;
     width: 100%;
@@ -103,7 +102,6 @@ h3::after {
 .card {
     border: 2px solid #354D6E;
     border-radius: 10px;
-    gap: 2rem;
     line-height: 25px;
 }
 
