@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 Home Page</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Brittany Williams</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals - Brittany Williams - Homepage for WDD131 Course">
+    <meta name="author" content="Brittany Williams">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <h1>WDD 131 - Brittany</h1>
+    <header>
+        <span id="course-title">
+            WDD 131 – Dynamic Web Fundamentals
+        </span>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/brittanywilliams-NZ-AUS"
+                        title="LinkedIn Profile Page">LinkedIn</a></li>
+                <li><a href=https://byupw.instructure.com/ title="Canvas">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng&id=p13#p13"
+                        title="My Favourite Scripture">Scripture</a></li>
+                <li><a href="" title="My Final Project">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>
+            Brittany J. Williams
+        </h1>
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <p>My name is Brittany Williams, and I currently live in Perth, Western Australia, although I originally
+                    come from New
+                    Zealand. I am a stay-at-home mum to three amazing children and homeschool my two oldest. I love
+                    Jesus Christ and His
+                    gospel, doing family history and attending the temple as much as possible. I enjoy learning new
+                    things and I am excited to be studying Software Development through BYU, as programming
+                    has been an interest of mine for a long time.</p>
+                <img src="images/profile.jpg" alt="Profile picture of Brittany Williams">
+            </div>
+            <h3>Perth, Western Australia</h3>
+            <div class="country-grid">
+                <figure>
+                    <img src="images/perth_city_dusk_reflection.jpg" alt="Perth city skyline at dusk">
+                    <figcaption>Perth | Capital City of Western Australia</figcaption>
+                </figure>
+                <p>Western Australia is the largest state in Australia, situated on the left/west side. It takes up
+                    about one third of Australia and has approximately 3 million people living in the state. The capital
+                    city is Perth, although there are a lot of smaller cities and towns. It has a large desert and
+                    multiple mines from iron, coal and gold spread in different areas. </p>
+            </div>
+
+        </section>
+        <section class="card resources">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://dev.to/">DEV.to Community</a></li>
+                <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+                <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+                <li><a href="https://www.udemy.com/">Udemy</a></li>
+                <li><a href="https://picsum.photos/">Lorem Picsum Image Placeholder </a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Brittany Williams | Australia</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>
