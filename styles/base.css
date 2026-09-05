@@ -108,6 +108,7 @@ h3::after {
     border: 2px solid var(--secondary-color);
     border-radius: 10px;
     line-height: 25px;
+    overflow: hidden;
 }
 
 .about-grid {
