@@ -19,6 +19,11 @@
     box-sizing: border-box;
 }
 
+header {
+    margin: 0 auto;
+    width: 100%
+}
+
 #course-title {
     display: block;
     padding: 30px;
