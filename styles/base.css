@@ -5,8 +5,8 @@
     --accent-color: #FFD656;
 
     /* Text colours */
-    --primary-text: #000;
-    --secondary-text: #fff;
+    --primary-text: #000000;
+    --secondary-text: #ffffff;
 
     /* Fonts */
     --heading-font: "Playfair", serif;
@@ -105,7 +105,7 @@ h3::after {
 }
 
 .card {
-    border: 2px solid #354D6E;
+    border: 2px solid var(--secondary-color);
     border-radius: 10px;
     line-height: 25px;
 }
