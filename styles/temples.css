@@ -28,7 +28,7 @@ main {
     margin: 0 auto;
 }
 
-.navigation {
+nav {
     background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@ main {
     font-size: 1.2rem;
 }
 
-.navigation ul {
+nav ul {
     list-style-type: none;
     text-align: right;
     list-style: none;
@@ -46,7 +46,7 @@ main {
 
 }
 
-.navigation a {
+nav a {
     display: none;
 }
 
@@ -54,7 +54,7 @@ main {
     font-size: 1.5rem;
 }
 
-.navigation a:hover {
+nav a:hover {
     color: var(--accent-color);
 }
 

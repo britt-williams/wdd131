@@ -1,17 +1,23 @@
 @media (min-width: 640px) {
 
-    .navigation {
+    nav {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
-    
-    .navigation ul {
+
+    nav ul {
         display: flex;
         gap: 2rem;
         padding: 1rem;
         font-size: 1.5rem;
+    }
+
+    nav a {
+        display: block;
+        text-decoration: none;
+        color: var(--secondary-text);
     }
 
     .page-title {
@@ -19,14 +25,7 @@
         margin-right: auto;
     }
 
-    .navigation a {
-        display: block;
-        text-decoration: none;
-        color: var(--secondary-text);
-    }
-
     #menu {
         display: none;
     }
-
 }
