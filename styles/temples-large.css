@@ -1,0 +1,32 @@
+@media (min-width: 640px) {
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .navigation ul {
+        display: flex;
+        gap: 2rem;
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+        margin-right: auto;
+    }
+
+    .navigation a {
+        display: block;
+        text-decoration: none;
+        color: var(--secondary-text);
+    }
+
+    #menu {
+        display: none;
+    }
+
+}
