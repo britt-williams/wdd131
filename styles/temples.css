@@ -91,7 +91,7 @@ nav a:hover {
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
     place-items: center;
     margin: 25px;
 }
@@ -101,6 +101,7 @@ nav a:hover {
     height: 250px;
     margin: 0.5rem;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 figcaption {

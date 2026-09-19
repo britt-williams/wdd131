@@ -1,0 +1,149 @@
+:root {
+    /* Background/accent colours */
+    --primary-color: #FFFFFF;
+    --secondary-color: #FBE11B;
+    --accent-color: #1E2047;
+    --background-color: rgba(255, 255, 255, 0.8);
+    
+    /* Text colours */
+    --primary-text: #000000;
+    --secondary-text: #ffffff;
+
+    /* Fonts */
+    --heading-font: "Story Script", sans-serif;
+    --body-font: "Lato", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    font-family: var(--body-font);
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+}
+
+h1 {
+    padding: 30px;
+    text-align: center;
+    background-color: var(--accent-color);
+    border-bottom: 15px solid var(--secondary-color);
+    color: var(--secondary-text);
+    font-size: 3rem;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+    max-width: 350px;
+    margin: 0 auto;
+    color: var(--primary-text);
+}
+
+h2 {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1.8rem;
+}
+
+.weather img {
+    padding-bottom: 10px;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    text-align: left;
+}
+
+dt {
+    font-weight: 800;
+    text-align: right;
+}
+
+footer {
+    padding: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+    font-family: var(--body-font);
+    font-size: .8rem;
+}
+
+
+/* Media Query Code for Larger Screen Sizes */
+@media (min-width: 640px) {
+
+    .hero img {
+        height: auto;
+    }
+
+    main {
+        position: relative;
+    }
+
+    section {
+        border-radius: 5px;
+        background-color: var(--background-color);
+        padding-bottom: 30px;
+        min-width: 300px;
+    }
+
+    .data {
+        position: absolute;
+        top: 60px;
+        left: 60px;
+    }
+
+    .weather {
+        position: absolute;
+        bottom: 60px;
+        right: 60px;
+    }
+
+    .data h2,
+    .weather h2 {
+        width: 115%;
+        margin-left: -40px;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        background-color: var(--secondary-color);
+        border-radius: 5px;
+        text-align: left;
+    }
+
+    dl {
+        grid-template-columns: auto auto;
+        justify-content: center;
+        gap: 5px 10px;
+        text-align: left;
+    }
+
+    .weather-icon {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: " 🌞";
+    }
+
+}
