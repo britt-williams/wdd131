@@ -88,12 +88,12 @@ const temples = [
             "https://www.churchofjesuschrist.org/imgs/c5d27d196f7b58ce3267af61a746073ec7e94ac2/full/!1200,/0/default"
     },
     {
-        templeName: "Auckland New Zealand",
-        location: "Auckland City, New Zealand",
-        dedicated: "2025, April, 13",
-        area: 45456,
+        templeName: "Salt Lake Temple",
+        location: "Salt Lake City, Utah, United States",
+        dedicated: "1893, April, 6",
+        area: 382207,
         imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/auckland-new-zealand-temple/auckland-new-zealand-temple-57793.jpg"
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/2018/400x250/slctemple5.jpg"
     },
     {
         templeName: "Perth Australia",
@@ -130,7 +130,7 @@ newLink.addEventListener("click", () => {
 smallLink.addEventListener("click", () => {
     createTempleCard(temples.filter(temple => (temple.area < 10000)));
 });
-    
+
 largeLink.addEventListener("click", () => {
     createTempleCard(temples.filter(temple => (temple.area > 90000)));
 });
@@ -139,10 +139,10 @@ function createTempleCard(filteredTemples) {
     document.querySelector("#temple-cards").innerHTML = "";
     filteredTemples.forEach(temple => {
         const card = document.createElement("section");
-        
+
         const name = document.createElement("h2");
         name.textContent = temple.templeName;
-        
+
         const location = document.createElement("p");
         const locationTitle = document.createElement("span");
         locationTitle.textContent = "Location: "
@@ -152,12 +152,12 @@ function createTempleCard(filteredTemples) {
         const dedicatedTitle = document.createElement("span");
         dedicatedTitle.textContent = "Dedicated: "
         dedicated.append(dedicatedTitle, temple.dedicated);
-        
+
         const size = document.createElement("p");
         const sizeTitle = document.createElement("span");
         sizeTitle.textContent = "Area: "
         size.append(sizeTitle, temple.area, " sq ft");
-        
+
         const templeImage = document.createElement("img");
         templeImage.src = temple.imageUrl;
         templeImage.alt = temple.templeName;
