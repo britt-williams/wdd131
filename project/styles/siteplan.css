@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Font Styles */
+    --heading-font: "Libre Baskerville", serif;
+    --body-font: "Lato", sans-serif;
+
+    /*Background Colors*/
+    --primary-color: #607a72;
+    --secondary-color: #D5C874;
+    --accent-color: #CEAF64;
+
+    /*Text Colors*/
+    --primary-font-color: #000000;
+    --secondary-font-color: #ffffff;
+}
+
+main {
+    font-family: var(--body-font);
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+.heading-font {
+    font-family: var(--heading-font);
+}
+
+.body-font {
+    font-family: var(--body-font);
+}
+
+.question-1,
+.question-2 {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.heading-font,
+.body-font {
+    font-weight: 700;
+}
+
+.primary-font-color {
+    color: var(--primary-font-color);
+}
+
+.secondary-font-color {
+    width: 300px;
+    color: var(--secondary-font-color);
+    background-color: var(--primary-font-color);
+}
+
+.secondary-font-color::marker {
+    color: var(--primary-font-color);
+}
+
+.scenarios,
+.color-schema,
+.site-purpose,
+.site-name,
+.typography,
+.wireframe-heading {
+    background-color: var(--primary-color);
+    color: var(--secondary-font-color);
+    padding: 5px;
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+.wireframes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.questions {
+    background-color: var(--secondary-color);
+}
