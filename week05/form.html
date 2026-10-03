@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD Week 5 Form Assignment</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals - Brittany Williams - Product Review Page">
+    <meta name="author" content="Brittany Williams">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Product Review</h1>
+        <form method="get" action="review.html" class="review-form">
+            <div class="required">* required fields</div>
+            <label for="product-name">Product Name*
+                <select id="product-name" name="product-name" required>
+                    <option value="" selected disabled>Select a Product... &#9662;</option>
+                </select>
+            </label>
+
+            <fieldset class="overall-rating">
+                <legend>Overall Rating*</legend>
+                <input type="radio" id="fivestar" name="rating" value="5" aria-label="5 stars" required><label for="fivestar"></label>
+                <input type="radio" id="fourstar" name="rating" value="4" aria-label="4 stars" required><label for="fourstar"></label>
+                <input type="radio" id="threestar" name="rating" value="3" aria-label="3 stars" required><label for="threestar"></label>
+                <input type="radio" id="twostar" name="rating" value="2" aria-label="2 stars" required><label for="twostar"></label>
+                <input type="radio" id="onestar" name="rating" value="1" aria-label="1 star" required><label for="onestar"></label>
+            </fieldset>
+
+            <label for="installation-date">Date of Installation*
+                <input type="date" id="installation-date" name="installation-date" required></label>
+
+            <fieldset class="product-features">
+                <legend>Which features did you find useful in the product? <span>(Check all that apply)</span></legend>
+                <label><input type="checkbox" id="design" name="features" value="design"> Design</label>
+                <label><input type="checkbox" id="durability" name="features" value="durability"> Durability</label>
+                <label><input type="checkbox" id="ease-of-use" name="features" value="ease-of-use"> Ease of Use</label>
+                <label><input type="checkbox" id="performance" name="features" value="performance"> Performance</label>
+            </fieldset>
+
+            <label for="written-review">Written Review <span>(Optional)</span>
+                <textarea id="written-review" name="written-review"></textarea></label>
+
+            <label for="name">Your Name<span> (Optional)</span><input type="text" id="name" name="name"></label>
+
+            <input type="submit" value="Send Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Brittany Williams | Australia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
