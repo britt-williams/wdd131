@@ -45,7 +45,8 @@ form.addEventListener("submit", (event) => {
     });
 
     if (selectedChildren.length === 0) {
-        alert("Please select at least one child.");
+        document.querySelector('#child-error').textContent =
+            'Please select at least one child.';
         return;
     };
 
@@ -66,7 +67,7 @@ form.addEventListener("submit", (event) => {
     setLearningRecord();
 
     form.reset();
-    saveMessage.textContent = "✓ Your learning has been recorded!";
+    saveMessage.textContent = '✓ Your learning has been recorded!';
 
 });
 

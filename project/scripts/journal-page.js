@@ -87,7 +87,7 @@ function filterEntries() {
         const noRecordMessage = document.createElement('p');
         noRecordMessage.classList.add('no-record-message');
 
-        noRecordMessage.textContent = "No entries matching these filters."
+        noRecordMessage.textContent = 'No entries matching these filters.'
         journalEntries.append(noRecordMessage)
     }
 
@@ -103,12 +103,12 @@ function setLearningRecord() {
 };
 
 function deleteEntry(entry) {
-    const confirmed = confirm("Are you sure you want to delete this learning record? This action cannot be undone.")
+    const confirmed = confirm('Are you sure you want to delete this learning record? This action cannot be undone.')
 
     if (!confirmed) {
         return;
     }
-    
+
     learningRecordArray = learningRecordArray.filter((item) => item !== entry);
     setLearningRecord();
     filterEntries();

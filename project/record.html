@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website - Home Education Learning Record</title>
+    <title>Home Education Recording Learning Form</title>
     <meta name="description"
         content="WDD 131 – Dynamic Web Fundamentals - Brittany Williams - Home Education Learning Record Project">
     <meta name="author" content="Brittany Williams">
     <link rel="stylesheet" href="styles/project.css">
-    <script src="scripts/project-home.js" defer></script>
+    <script src="scripts/full-site.js" defer></script>
     <script src="scripts/record-page.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,8 @@
     <header>
         <div>
             <img class="logo" src="images/journal-logo-white.png"
-                alt="Logo of a cartoon computer screen sitting between an open book with the words The Home Learning Journal underneath">
+                alt="Logo of a cartoon computer screen sitting between an open book with the words The Home Learning Journal underneath"
+                width="250" height="250">
             <button id="menu" aria-label="Navigation Menu"></button>
         </div>
         <nav>
@@ -36,7 +37,7 @@
 
     <main>
 
-        <h1>RECORD LEARNING</h1>
+        <h1>Record Your Learning</h1>
 
         <form method="get" action="journal.html" class="record-form">
             <div class="required">* required fields</div>
@@ -52,19 +53,24 @@
                     Alma</label>
                 <label for="sam"><input type="checkbox" id="sam" class="children" name="children" value="sam">
                     Sam</label>
+                <p id="child-error" role="alert"></p>
             </fieldset>
 
-            <label>Areas of Learning: <span>(Select up to three)</span>
-                <select id="curriculum-area-1" class="curriculum-area" name="curriculum-area" required>
+            <fieldset class="areas-of-learning">
+                <legend>Areas of Learning: <span>(Select up to three)</span></legend>
+                <select id="curriculum-area-1" class="curriculum-area" name="curriculum-area"
+                    aria-label="Curriculum area 1" required>
                     <option value="" selected>Select a curriculum area: &#9662;</option>
                 </select>
-                <select id="curriculum-area-2" class="curriculum-area" name="curriculum-area">
+                <select id="curriculum-area-2" class="curriculum-area" name="curriculum-area"
+                    aria-label="Curriculum area 2">
                     <option value="" selected>Select a curriculum area: &#9662;</option>
                 </select>
-                <select id="curriculum-area-3" class="curriculum-area" name="curriculum-area">
+                <select id="curriculum-area-3" class="curriculum-area" name="curriculum-area"
+                    aria-label="Curriculum area 3">
                     <option value="" selected>Select a curriculum area: &#9662;</option>
                 </select>
-            </label>
+            </fieldset>
 
             <label for="learning-statement">What did we do today?
                 <textarea id="learning-statement" name="learning-statement"></textarea></label>

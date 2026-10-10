@@ -7,6 +7,8 @@
     --primary-color: #607a72;
     --secondary-color: #A3D0C5;
     --accent-color: #CEAF64;
+    --error-color: #9b2525;
+    --form-input-color: rgba(206, 175, 100, 0.8);
 
     /*Text Colors*/
     --primary-font-color: #000000;
@@ -45,15 +47,15 @@ nav {
     display: flex;
     flex-direction: column;
     color: var(--secondary-font-color);
-    padding: 1.5rem;
+    padding: 0;
     font-family: var(--heading-font);
 }
 
 nav ul {
-    list-style-type: none;
     text-align: right;
     list-style: none;
     align-self: flex-end;
+    padding: 0;
 }
 
 nav a {
@@ -61,7 +63,9 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--accent-color);
+    text-decoration: 3px underline;
+    text-decoration-color: var(--accent-color);
+    text-underline-offset: 6px;
 }
 
 nav a.active::before {
@@ -74,7 +78,7 @@ nav a.active::before {
     font-size: 2rem;
     border: 0;
     background: none;
-    color: var(--accent-color);
+    color: var(--secondary-font-color);
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -101,8 +105,8 @@ nav a.active::before {
 
 .hero article {
     position: absolute;
+    height: auto;
     padding: 1rem;
-    height: 175px;
     bottom: 15%;
     left: 15px;
     right: 15px;
@@ -138,7 +142,6 @@ nav a.active::before {
 h1 {
     font-family: var(--heading-font);
     margin: 3rem auto;
-    font-family: var(--heading-font);
     background-color: var(--primary-color);
     border-radius: 8px;
     max-width: 550px;
@@ -155,10 +158,12 @@ h2 {
 p,
 ul {
     padding: 5px;
-    text-align: justify;
+    text-align: left;
 }
 
-.record-button {
+.record-button,
+.button,
+.delete-button {
     background-color: var(--accent-color);
     color: var(--primary-font-color);
     text-decoration: none;
@@ -171,7 +176,7 @@ ul {
 }
 
 .record-button:hover {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
 }
 
 .features .button {
@@ -180,12 +185,6 @@ ul {
 }
 
 .button {
-    background-color: var(--accent-color);
-    color: var(--primary-font-color);
-    text-decoration: none;
-    border-radius: 5px;
-    padding: .7rem;
-    box-shadow: 1px 1px 4px #999;
     font-size: .9rem;
     text-align: center;
 }
@@ -198,6 +197,18 @@ ul {
 .button {
     display: inline-block;
     margin: 1rem 0;
+}
+
+.delete-button {
+    margin-top: auto;
+    align-self: center;
+    border: none;
+    font-size: .9rem;
+    text-align: center;
+}
+
+.delete-button:hover {
+    background-color: var(--primary-color);
 }
 
 #save-message {
@@ -229,12 +240,6 @@ ul {
     font-style: italic;
 }
 
-figure {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
 form {
     margin: auto;
     border-radius: 8px;
@@ -261,14 +266,21 @@ legend {
     padding: 1.2rem 0 0.3rem 0;
 }
 
+#child-error {
+    grid-column: 1 / -1;
+    color: var(--error-color);
+}
+
 .journal-explanation {
     text-align: center;
     padding-bottom: 2rem;
     font-size: 1rem;
 }
 
-.filter-categories {
-    text-align: center;
+.areas-of-learning {
+    grid-template-columns: 1fr;
+    width: 90%;
+    gap: 5px;
 }
 
 .children span {
@@ -291,8 +303,7 @@ legend {
 .record-form input[type="date"],
 .record-form select,
 .record-form textarea {
-    background-color: var(--accent-color);
-    opacity: 0.8;
+    background-color: var(--form-input-color);
     border-radius: 6px;
     padding: .90rem;
     width: 100%;
@@ -316,16 +327,17 @@ legend {
 }
 
 .record-form input[type="submit"]:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
+    color: var(--primary-font-color);
 }
 
 .record-form input:required,
-select:required {
+.record-form select:required {
     border-left: solid 10px var(--primary-color);
 }
 
 .record-form input:required:valid,
-select:required:valid {
+.record-form select:required:valid {
     border-left: solid 10px var(--accent-color);
 }
 
@@ -336,8 +348,7 @@ select:required:valid {
 
 .filter-categories select,
 .filter-categories input[type="date"] {
-    background-color: var(--accent-color);
-    opacity: 0.8;
+    background-color: var(--form-input-color);
     border-radius: 6px;
     width: 90%;
     border: none;
@@ -352,6 +363,7 @@ select:required:valid {
     grid-template-columns: 1fr;
     gap: 1rem;
     margin: 1rem 0;
+    text-align: center;
 }
 
 .filter-group {
@@ -370,10 +382,6 @@ select:required:valid {
     line-height: 2rem;
 }
 
-.entry-journal h2 {
-    font-size: 1.1rem;
-}
-
 .entry-journal span {
     font-size: 1.1rem;
     font-weight: 700;
@@ -382,24 +390,6 @@ select:required:valid {
 
 .entry-children {
     text-transform: capitalize;
-}
-
-.delete-button {
-    margin-top: auto;
-    align-self: center;
-    background-color: var(--accent-color);
-    color: var(--primary-font-color);
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    padding: .7rem;
-    box-shadow: 1px 1px 4px #999;
-    font-size: .9rem;
-    text-align: center;
-}
-
-.delete-button:hover {
-    background-color: var(--primary-color);
 }
 
 .no-record-message {
@@ -430,6 +420,7 @@ footer p {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding: 1.5rem;
     }
 
     nav ul {
@@ -445,18 +436,14 @@ footer p {
         color: var(--secondary-font-color);
     }
 
-    .page-title {
-        font-size: 2rem;
-        margin-right: auto;
-    }
-
     #menu {
         display: none;
     }
 
     .logo {
         width: 110px;
-        margin-left: 8%
+        margin-left: 8%;
+        max-width: 150px;
     }
 
     h1 {
@@ -465,7 +452,7 @@ footer p {
 
     .hero article {
         padding: 1.5rem;
-        height: 40%;
+        height: auto;
         bottom: 42%;
         left: 5%;
         right: 5%;
@@ -517,16 +504,6 @@ footer p {
         height: 6rem;
     }
 
-    .record-button,
-    .button {
-        display: inline-block;
-        margin: 1rem 0;
-    }
-
-    .logo {
-        max-width: 150px;
-    }
-
     #journal-entries {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -542,18 +519,23 @@ footer p {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .areas-of-learning {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 90%;
+    }
 }
 
 @media (min-width: 900px) {
-    
+
     .logo {
         width: 140px;
         margin-left: 8%
     }
 
     .hero article {
+        height: auto;
         padding: 30px;
-        height: 250px;
         bottom: 280px;
         left: 50px;
         right: 50px;
@@ -579,5 +561,10 @@ footer p {
 
     .filter-categories {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .areas-of-learning {
+        gap: 15px;
+        width: 92%;
     }
 }
