@@ -47,10 +47,10 @@ form.addEventListener("submit", (event) => {
 
     if (selectedChildren.length === 0) {
         document.querySelector('#child-error').textContent =
-            'Please select at least one child.';
+            `Please select at least one child.`;
         return;
     };
-    childError.textContent = '';
+    childError.textContent = ``;
 
     selectedCurriculumAreas.forEach(selection => {
         if (selection.value) {
@@ -69,12 +69,12 @@ form.addEventListener("submit", (event) => {
     setLearningRecord();
 
     form.reset();
-    saveMessage.textContent = '✓ Your learning has been recorded!';
+    saveMessage.textContent = `✓ Your learning has been recorded!`;
 
 });
 
 form.addEventListener("input", () => {
-    saveMessage.textContent = '';
-    childError.textContent = '';
+    saveMessage.textContent = ``;
+    childError.textContent = ``;
 
 });

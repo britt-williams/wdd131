@@ -42,17 +42,17 @@ function displayArray(item) {
 
     const deleteButton = document.createElement('button');
 
-    dateLabel.textContent = 'Date: ';
-    childrenLabel.textContent = 'Children: ';
-    curriculumLabel.textContent = 'Curriculum: ';
-    statementLabel.textContent = 'What We Did: ';
+    dateLabel.textContent = `Date: `;
+    childrenLabel.textContent = `Children: `;
+    curriculumLabel.textContent = `Curriculum: `;
+    statementLabel.textContent = `What We Did: `;
 
     date.append(dateLabel, `${day}/${month}/${year.slice(-2)}`);
-    children.append(childrenLabel, item.children.join(', '));
-    curriculum.append(curriculumLabel, item.selectedAreas.join(', '));
+    children.append(childrenLabel, item.children.join(`, `));
+    curriculum.append(curriculumLabel, item.selectedAreas.join(`, `));
     statement.append(statementLabel, item.statement);
 
-    deleteButton.textContent = 'Delete Entry';
+    deleteButton.textContent = `Delete Entry`;
     deleteButton.classList.add('delete-button');
 
     deleteButton.addEventListener('click', () => {
@@ -87,7 +87,7 @@ function filterEntries() {
         const noRecordMessage = document.createElement('p');
         noRecordMessage.classList.add('no-record-message');
 
-        noRecordMessage.textContent = 'No entries matching these filters.'
+        noRecordMessage.textContent = `No entries matching these filters.`
         journalEntries.append(noRecordMessage)
     }
 
@@ -103,7 +103,7 @@ function setLearningRecord() {
 };
 
 function deleteEntry(entry) {
-    const confirmed = confirm('Are you sure you want to delete this learning record? This action cannot be undone.')
+    const confirmed = confirm(`Are you sure you want to delete this learning record? This action cannot be undone.`)
 
     if (!confirmed) {
         return;

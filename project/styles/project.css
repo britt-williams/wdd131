@@ -43,6 +43,7 @@ main {
 }
 
 nav {
+    grid-column: 1 / -1;
     background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
@@ -202,7 +203,6 @@ ul {
     margin-top: auto;
     align-self: center;
     border: none;
-    font-size: .8rem;
     text-align: center;
     font-weight: 500;
 }
@@ -409,6 +409,8 @@ footer p {
 @media (min-width: 640px) {
 
     nav {
+        grid-column: 2;
+        grid-row: 1;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -455,7 +457,6 @@ footer p {
 
     .hero img {
         margin-top: 50px;
-        height: 100%;
     }
 
     .hero p {
@@ -525,7 +526,6 @@ footer p {
         bottom: 280px;
         left: 50px;
         right: 50px;
-        font-size: 1.4rem;
     }
 
     .hero h1 {
@@ -534,7 +534,6 @@ footer p {
 
     .features {
         flex-direction: row;
-        font-size: 1rem;
         gap: 30px;
     }
 

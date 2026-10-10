@@ -8,7 +8,7 @@ year.textContent = today.getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
 hambutton.addEventListener('click', () => {
-    mainnav.classList.toggle('open');
+    const isOpen = mainnav.classList.toggle('open');
     hambutton.classList.toggle('open');
+    hambutton.setAttribute('aria-expanded', isOpen);
 });
-

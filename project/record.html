@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Education Recording Learning Form</title>
     <meta name="description"
-        content="WDD 131 – Dynamic Web Fundamentals - Brittany Williams - Home Education Learning Record Project">
+        content="Record your family's learning in a minute: pick the date, children and curriculum areas, then save it to your journal.">
     <meta name="author" content="Brittany Williams">
     <link rel="stylesheet" href="styles/project.css">
     <script src="scripts/full-site.js" defer></script>
@@ -24,7 +24,7 @@
             <img class="logo" src="images/journal-logo-white.png"
                 alt="Logo of a cartoon computer screen sitting between an open book with the words The Home Learning Journal underneath"
                 width="250" height="250">
-            <button id="menu" aria-label="Navigation Menu"></button>
+            <button id="menu" type="button" aria-label="Navigation Menu" aria-expanded="false"></button>
         </div>
         <nav>
             <ul class="navigation">
@@ -60,15 +60,15 @@
                 <legend>Areas of Learning: <span>(Select up to three)</span></legend>
                 <select id="curriculum-area-1" class="curriculum-area" name="curriculum-area"
                     aria-label="Curriculum area 1" required>
-                    <option value="" selected>Select a curriculum area: </option>
+                    <option value="" selected>Select a curriculum area</option>
                 </select>
                 <select id="curriculum-area-2" class="curriculum-area" name="curriculum-area"
                     aria-label="Curriculum area 2">
-                    <option value="" selected>Select a curriculum area: </option>
+                    <option value="" selected>Select a curriculum area</option>
                 </select>
                 <select id="curriculum-area-3" class="curriculum-area" name="curriculum-area"
                     aria-label="Curriculum area 3">
-                    <option value="" selected>Select a curriculum area: </option>
+                    <option value="" selected>Select a curriculum area</option>
                 </select>
             </fieldset>
 
