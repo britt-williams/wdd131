@@ -83,14 +83,19 @@ function filterEntries() {
 
     journalEntries.replaceChildren();
 
-    if (filteredRecords.length === 0) {
-        const noRecordMessage = document.createElement('p');
-        noRecordMessage.classList.add('no-record-message');
+    const noRecordMessage = document.createElement('p');
+    noRecordMessage.classList.add('no-record-message');
 
-        noRecordMessage.textContent = `No entries matching these filters.`
+    if (learningRecordArray.length === 0) {
+        noRecordMessage.textContent = (`No learning records have been saved yet.`)
         journalEntries.append(noRecordMessage)
     }
 
+    else if (filteredRecords.length === 0) {
+        noRecordMessage.textContent = (`No entries matching these filters.`)
+        journalEntries.append(noRecordMessage)
+    }
+        
     else {
         filteredRecords.forEach(record => {
             displayArray(record);
