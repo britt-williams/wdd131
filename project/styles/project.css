@@ -34,9 +34,10 @@ main {
 }
 
 .logo {
-    width: 35%;
+    width: 90px;
     height: auto;
     border-radius: 15px;
+    margin-left: 5%;
 }
 
 nav {
@@ -314,9 +315,9 @@ legend {
     font-size: 1.1rem;
 }
 
- .record-form input[type="submit"]:hover {
+.record-form input[type="submit"]:hover {
     background-color: var(--secondary-color);
- }
+}
 
 .record-form input:required,
 select:required {
@@ -396,6 +397,7 @@ select:required:valid {
     font-size: .9rem;
     text-align: center;
 }
+
 .delete-button:hover {
     background-color: var(--primary-color);
 }
@@ -450,6 +452,11 @@ footer p {
 
     #menu {
         display: none;
+    }
+
+    .logo {
+        width: 110px;
+        margin-left: 8%
     }
 
     h1 {
@@ -538,6 +545,12 @@ footer p {
 }
 
 @media (min-width: 900px) {
+    
+    .logo {
+        width: 140px;
+        margin-left: 8%
+    }
+
     .hero article {
         padding: 30px;
         height: 250px;
