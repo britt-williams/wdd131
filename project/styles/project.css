@@ -106,7 +106,7 @@ nav a.active::before {
 
 .hero article {
     position: absolute;
-    padding: 1rem;
+    padding: 1.5rem;
     bottom: 15%;
     left: 15px;
     right: 15px;
@@ -130,7 +130,7 @@ nav a.active::before {
     background-color: transparent;
     color: var(--primary-color);
     margin: 0;
-    padding: 0 0 5px 0;
+    padding: 8px 0 10px 0;
     max-width: none;
     font-size: 1.2rem;
 }
