@@ -4,6 +4,7 @@ const learningStatement = document.querySelector('#learning-statement');
 const form = document.querySelector('.record-form');
 const saveMessage = document.querySelector('#save-message');
 const children = document.querySelectorAll('input[name="children"]');
+const childError = document.querySelector('#child-error');
 let learningRecordArray = getLearningRecord() || [];
 
 const curriculumAreas = [
@@ -49,6 +50,7 @@ form.addEventListener("submit", (event) => {
             'Please select at least one child.';
         return;
     };
+    childError.textContent = '';
 
     selectedCurriculumAreas.forEach(selection => {
         if (selection.value) {
@@ -72,5 +74,7 @@ form.addEventListener("submit", (event) => {
 });
 
 form.addEventListener("input", () => {
-    saveMessage.textContent = "";
+    saveMessage.textContent = '';
+    childError.textContent = '';
+
 });

@@ -105,7 +105,6 @@ nav a.active::before {
 
 .hero article {
     position: absolute;
-    height: auto;
     padding: 1rem;
     bottom: 15%;
     left: 15px;
@@ -122,6 +121,8 @@ nav a.active::before {
     width: 100%;
     border-radius: 10px;
     margin: 20px 0;
+    min-height: 280px;
+    object-fit: cover;
 }
 
 .hero h1 {
@@ -172,11 +173,13 @@ ul {
     box-shadow: 1px 1px 4px #999;
     font-size: .8rem;
     font-weight: 600;
-    padding-bottom: 10px;
 }
 
-.record-button:hover {
-    background-color: var(--secondary-color);
+.record-button:hover,
+.button:hover,
+.delete-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-font-color);
 }
 
 .features .button {
@@ -189,10 +192,6 @@ ul {
     text-align: center;
 }
 
-.button:hover {
-    background-color: var(--primary-color);
-}
-
 .record-button,
 .button {
     display: inline-block;
@@ -203,12 +202,9 @@ ul {
     margin-top: auto;
     align-self: center;
     border: none;
-    font-size: .9rem;
+    font-size: .8rem;
     text-align: center;
-}
-
-.delete-button:hover {
-    background-color: var(--primary-color);
+    font-weight: 500;
 }
 
 #save-message {
@@ -299,7 +295,6 @@ legend {
     margin: 1.5rem 4%;
 }
 
-.record-form input[type="text"],
 .record-form input[type="date"],
 .record-form select,
 .record-form textarea {
@@ -307,7 +302,6 @@ legend {
     border-radius: 6px;
     padding: .90rem;
     width: 100%;
-    appearance: none;
     border: none;
     max-width: 650px;
     margin: .5rem 0 .5rem 0;
@@ -355,7 +349,6 @@ legend {
     text-align: center;
     margin: 0 5% 0 5%;
     padding: .75rem;
-    appearance: none;
 }
 
 .filter-categories {
@@ -416,7 +409,6 @@ footer p {
 @media (min-width: 640px) {
 
     nav {
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -443,7 +435,6 @@ footer p {
     .logo {
         width: 110px;
         margin-left: 8%;
-        max-width: 150px;
     }
 
     h1 {
@@ -452,7 +443,6 @@ footer p {
 
     .hero article {
         padding: 1.5rem;
-        height: auto;
         bottom: 42%;
         left: 5%;
         right: 5%;
@@ -492,7 +482,6 @@ footer p {
         max-width: 1000px;
     }
 
-    .record-form input[type="text"],
     .record-form input[type="date"],
     .record-form select,
     .record-form textarea,
@@ -515,7 +504,6 @@ footer p {
     }
 
     .filter-categories {
-        display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -530,11 +518,9 @@ footer p {
 
     .logo {
         width: 140px;
-        margin-left: 8%
     }
 
     .hero article {
-        height: auto;
         padding: 30px;
         bottom: 280px;
         left: 50px;
