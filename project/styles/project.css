@@ -34,9 +34,8 @@ main {
 }
 
 .logo {
-    max-width: 120px;
+    width: 35%;
     height: auto;
-    padding-left: 15px;
     border-radius: 15px;
 }
 
@@ -127,12 +126,13 @@ nav a.active::before {
     margin: 0;
     padding: 0 0 5px 0;
     max-width: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .hero p {
     text-align: center;
     color: var(--primary-font-color);
+    font-size: 1rem;
 }
 
 h1 {
@@ -159,14 +159,14 @@ ul {
 }
 
 .record-button {
-    background-color: var(--primary-color);
-    color: var(--secondary-font-color);
+    background-color: var(--accent-color);
+    color: var(--primary-font-color);
     text-decoration: none;
     border-radius: 5px;
     padding: .7rem;
     box-shadow: 1px 1px 4px #999;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: .9rem;
+    font-weight: 600;
 }
 
 .record-button:hover {
