@@ -20,7 +20,7 @@ function displayArray(item) {
     const dateLabel = document.createElement('span');
     dateLabel.classList.add('entry-label');
 
-    const [year, month, day] = item.date.split("-");
+    const [year, month, day] = item.date.split(`-`);
 
     const children = document.createElement('p');
     children.classList.add('entry-children');
@@ -87,13 +87,13 @@ function filterEntries() {
     noRecordMessage.classList.add('no-record-message');
 
     if (learningRecordArray.length === 0) {
-        noRecordMessage.textContent = (`No learning records have been saved yet.`)
-        journalEntries.append(noRecordMessage)
+        noRecordMessage.textContent = (`No learning records have been saved yet.`);
+        journalEntries.append(noRecordMessage);
     }
 
     else if (filteredRecords.length === 0) {
-        noRecordMessage.textContent = (`No entries matching these filters.`)
-        journalEntries.append(noRecordMessage)
+        noRecordMessage.textContent = (`No entries matching these filters.`);
+        journalEntries.append(noRecordMessage);
     }
         
     else {

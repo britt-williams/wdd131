@@ -107,7 +107,7 @@ nav a.active::before {
 .hero article {
     position: absolute;
     padding: 1.5rem;
-    bottom: 15%;
+    bottom: 100px;
     left: 15px;
     right: 15px;
     opacity: 0.9;
@@ -123,7 +123,7 @@ nav a.active::before {
     height: auto;
     border-radius: 10px;
     margin: 20px 0;
-    min-height: 280px;
+    min-height: 380px;
     object-fit: cover;
 }
 
@@ -161,7 +161,6 @@ h2 {
 p,
 ul {
     padding: 5px;
-    text-align: left;
 }
 
 .record-button,
@@ -204,7 +203,6 @@ ul {
     margin-top: auto;
     align-self: center;
     border: none;
-    text-align: center;
     font-weight: 500;
 }
 
@@ -229,7 +227,7 @@ ul {
     border: 5px dotted var(--secondary-color);
     border-radius: 8px;
     padding: 1.2rem;
-    margin: 1rem 1rem;
+    margin: 1rem;
     line-height: 2rem;
 }
 
@@ -445,8 +443,7 @@ footer p {
     }
 
     .hero article {
-        padding: 1.5rem;
-        bottom: 42%;
+        bottom: 120px;
         left: 5%;
         right: 5%;
         font-size: 1.4rem;
@@ -467,7 +464,6 @@ footer p {
     .record-button {
         padding: 1rem;
         font-size: 1.1rem;
-        font-weight: 600;
     }
 
     fieldset {
@@ -512,7 +508,6 @@ footer p {
     .areas-of-learning {
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
-        width: 90%;
     }
 }
 

@@ -50,6 +50,7 @@ form.addEventListener("submit", (event) => {
             `Please select at least one child.`;
         return;
     };
+    
     childError.textContent = ``;
 
     selectedCurriculumAreas.forEach(selection => {
